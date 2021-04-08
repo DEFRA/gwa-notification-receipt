@@ -21,5 +21,6 @@
       "queueName": "%MSG_RECEIPT_QUEUE%",
       "connection": "AzureWebJobsStorage"
     }
-  ]
+  ],
+  "disabled": false
 }
