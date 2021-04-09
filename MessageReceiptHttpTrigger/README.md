@@ -1,9 +1,21 @@
 # Message Receipt HTTP Trigger - JavaScript
 
-> Provide a callback URL for GOV.UK Notify to POST message receipts to.
+> Provides a callback URL for GOV.UK Notify to POST message receipts to.
 
 ## Detail
 
-An HTTP endpoint that can be POSTed to with details of a message's delivery
-status. The function takes the body, adds it to a queue and responds to
-the request with a 200.
+An HTTP endpoint to be POST'ed to with details of a message's delivery
+status. The function will check the request for a valid
+[Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization)
+header. If authorization is successful the message will be added to a queue.
+
+A number of responses are possible:
+
+* [200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) if the
+  header has been sent correctly and the request has been processed
+* [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) if the
+  header has not been sent
+* [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) if the
+  header has been sent but doesn't match the expected value
+* [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) if the
+  function errors during the processing
