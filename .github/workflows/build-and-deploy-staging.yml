@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy
+name: Build and Deploy Staging
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout Repo
       uses: actions/checkout@v2
 
     - name: Setup Node.js ${{ env.NODE_VERSION }} Environment
@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm ci
 
     - name: Lint Code Base
