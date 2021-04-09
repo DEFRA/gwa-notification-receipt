@@ -11,9 +11,9 @@ header. If authorization is successful the message will be added to a queue.
 
 Possible responses:
 
-| Status Code                                                         | Reason                                                                  |
-| -----------                                                         | ------                                                                  |
-| [200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) | Request has been processed successfully                                 |
-| [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) | Authorization header has not been sent                                  |
-| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Authorization header has been sent but doesn't match the expected value |
-| [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | There has been an unexpected problem encountered during execution       |
+| Status Code                                                                               | Reason                                                                  |
+| -----------                                                                               | ------                                                                  |
+| [202 Accepted](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/202)              | Request has been successfully accepted for processing                   |
+| [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401)          | Authorization header has not been sent                                  |
+| [403 Forbidden](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403)             | Authorization header has been sent but doesn't match the expected value |
+| [500 Internal Server Error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | There has been an unexpected problem encountered during execution       |

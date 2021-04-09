@@ -8,7 +8,7 @@ module.exports = async function (context) {
       const { body } = context.req
       context.bindings.messagesToSend = body
       context.res = {
-        status: 200
+        status: 202
       }
     } else if (!authHeader) {
       // No token
