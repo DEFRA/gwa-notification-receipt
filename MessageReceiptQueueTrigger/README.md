@@ -5,7 +5,7 @@
 
 ## Detail
 
-The function triggers on messages an Azure Queue Storage queue that have been
-added by [MessageReceiptHttpTrigger](../MessageReceiptHttpTrigger). The
+The function triggers on messages in an Azure Queue Storage queue that have
+been added by [MessageReceiptHttpTrigger](../MessageReceiptHttpTrigger). The
 messages are processed and added to Cosmos DB providing a record of each
 message's delivery status.
