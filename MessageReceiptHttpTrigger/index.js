@@ -14,12 +14,18 @@ module.exports = async function (context) {
       // No token
       context.res = {
         body: { error: 'AuthMissing', message: 'Missing authorization header.' },
+        headers: {
+          'Content-Type': 'application/json'
+        },
         status: 401
       }
     } else {
       // Incorrect token
       context.res = {
         body: { error: 'AuthError', message: 'Authorization header is not acceptable.' },
+        headers: {
+          'Content-Type': 'application/json'
+        },
         status: 403
       }
     }
