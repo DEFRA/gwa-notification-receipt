@@ -1,9 +1,18 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "scripts" : {
+  "author": "Defra",
+  "contributors": [
+    "Steve Hunt <steven.hunt@defra.gov.uk>"
+  ],
+  "description": "Azure Function app for processing Notify callbacks",
+  "homepage": "https://github.com/DEFRA/gwa-notification-receipt",
+  "license": "OGL-UK-3.0",
+  "name": "gwa-notification-receipt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEFRA/gwa-notification-receipt.git"
+  },
+  "scripts": {
     "test": "echo \"No tests yet...\""
   },
-  "author": ""
+  "version": "0.1.0"
 }
