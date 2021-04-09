@@ -12,7 +12,11 @@
     "url": "https://github.com/DEFRA/gwa-notification-receipt.git"
   },
   "scripts": {
+    "lint": "standard",
     "test": "echo \"No tests yet...\""
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
 }
