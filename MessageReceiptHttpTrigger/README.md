@@ -9,13 +9,11 @@ status. The function will check the request for a valid
 [Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization)
 header. If authorization is successful the message will be added to a queue.
 
-A number of responses are possible:
+Possible responses:
 
-* [200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) if the
-  header has been sent correctly and the request has been processed
-* [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) if the
-  header has not been sent
-* [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) if the
-  header has been sent but doesn't match the expected value
-* [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) if the
-  function errors during the processing
+| Status Code                                                         | Reason                                                                  |
+| -----------                                                         | ------                                                                  |
+| [200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) | Request has been processed successfully                                 |
+| [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) | Authorization header has not been sent                                  |
+| [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403) | Authorization header has been sent but doesn't match the expected value |
+| [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | There has been an unexpected problem encountered during execution       |
