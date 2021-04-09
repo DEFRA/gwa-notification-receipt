@@ -5,7 +5,7 @@ name: Build and Deploy Staging
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
   workflow_dispatch:
 
@@ -29,8 +29,9 @@ jobs:
       run: npm ci
 
     - name: Lint Code Base
-      run: npm run lint
-      # uses: github/super-linter@v3
+      uses: github/super-linter@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Deploy Function App
       uses: Azure/functions-action@v1
