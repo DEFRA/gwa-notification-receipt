@@ -18,7 +18,7 @@
       "name": "messagesToSend",
       "type": "queue",
       "direction": "out",
-      "queueName": "%MSG_RECEIPT_QUEUE%",
+      "queueName": "%NOTIFICATION_RECEIPT_QUEUE%",
       "connection": "AzureWebJobsStorage"
     }
   ],
