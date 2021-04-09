@@ -37,6 +37,6 @@ jobs:
       id: fa
       with:
         app-name: 'shunt-gwa-notification-receipt'
-        slot-name: 'shunt-gwa-notification-receipt-staging'
+        slot-name: 'staging'
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
         publish-profile: ${{ secrets.AZURE_FUNCTION_APP_PUBLISH_PROFILE_STAGING_SLOT }}
