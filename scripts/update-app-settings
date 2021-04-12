@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+# NOTE: Need to be logged in for this to work. Run `az login`.
+# Specific name and RG set here, will need udpating for different use cases.
+az functionapp config appsettings set --name shunt-gwa-notification-receipt --resource-group shunt-gwa --settings "@app-settings.json"

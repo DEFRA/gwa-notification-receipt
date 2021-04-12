@@ -43,3 +43,4 @@ __pycache__/
 *$py.class
 
 super-linter.log
+app-settings.json
