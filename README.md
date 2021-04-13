@@ -49,7 +49,7 @@ the effort involved is significant in comparison to using the real thing. On
 this basis it is advisable to use a real Cosmos DB instance.
 
 The app uses `local.settings.json` for local development.
-[example.local.settings.json](example.local.settings.json) can be used as the
+[.local.settings.json](.local.settings.json) can be used as the
 basis as it contains all required env vars with the exception of secrets which
 have been removed. The connection string for Azurite is included.
 
