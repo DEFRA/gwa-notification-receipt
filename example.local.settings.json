@@ -5,7 +5,7 @@
     "FUNCTIONS_WORKER_RUNTIME": "node",
     "COSMOS_DB": "",
     "COSMOS_DB_RECEIPTS_COLLECTION": "receipts-local",
-    "NOTIFY_BEARER_HEADER": "",
+    "NOTIFY_BEARER_HEADER": "Bearer <notify-bearer-token>",
     "NOTIFICATION_RECEIPT_QUEUE": "notification-receipts-local"
   }
 }

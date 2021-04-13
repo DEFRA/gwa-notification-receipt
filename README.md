@@ -53,6 +53,37 @@ The app uses `local.settings.json` for local development.
 basis as it contains all required env vars with the exception of secrets which
 have been removed. The connection string for Azurite is included.
 
+## Notify Set Up
+
+The app receives message receipts from Notify. Getting set up on Notify is
+straight forward, simply follow the
+[documentation](https://www.notifications.service.gov.uk/using-notify/get-started).
+
+A callback needs to be set up for the service created in Notify, additional
+information in the
+[documentation](https://docs.notifications.service.gov.uk/rest-api.html#callbacks).
+The callback requires a bearer token be set along with the callback URL.
+
+### Callback URL
+
+In order to test the function it would ideally be deployed so that Notify can
+access the URL. There are options available to expose localhost to the internet
+such as [ngrok](https://ngrok.com/) and
+[localtunnel](https://localtunnel.github.io/www/), however, deploying the
+function is simple, more robust and safer.
+
+HTTP Azure Functions can be set to require a
+[key for access](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=csharp#authorization-keys).
+The callback URL set in Notify needs to include the key for the function.
+
+### Bearer token
+
+Notify requires a bearer token to be set. It is used in the
+[Authorization header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization).
+The function checks the header is the expected value as set in the env var
+`NOTIFY_BEARER_HEADER`. Note that the check is against the full header value,
+no manipulation of it takes place for simplicity.
+
 ## License
 
 THIS INFORMATION IS LICENSED UNDER THE CONDITIONS OF THE OPEN GOVERNMENT
