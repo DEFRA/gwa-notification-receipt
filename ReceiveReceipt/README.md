@@ -1,4 +1,4 @@
-# Message Receipt HTTP Trigger - JavaScript
+# Receive Receipt - JavaScript
 
 > Provides a callback URL for GOV.UK Notify to POST message receipts to.
 

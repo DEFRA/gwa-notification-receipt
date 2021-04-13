@@ -13,8 +13,8 @@ before updating a collection is Cosmos DB.
 The app is made up of a number of functions, each function is explained in more
 detail in its' own README:
 
-* [MessageReceiptHttpTrigger](MessageReceiptHttpTrigger/README.md)
-* [MessageReceiptQueueTrigger](MessageReceiptQueueTrigger/README.md)
+* [ReceiveReceipt](ReceiveReceipt/README.md)
+* [ProcessReceipt](ProcessReceipt/README.md)
 
 ## Development
 
