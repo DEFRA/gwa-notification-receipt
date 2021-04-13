@@ -31,6 +31,28 @@ The documentation within this repo assumes the `command line` setup has been
 completed, specifically for
 [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
+## Running Locally
+
+To start the function app run `func start`.
+
+### Pre-requisites
+
+The app uses Azure Storage queues. When working locally
+[Azurite](https://github.com/Azure/Azurite) can be used to emulate storage.
+Follow the
+[instructions](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azurite)
+for your preferred installation option.
+
+The app uses Cosmos DB. Whilst an emulator can be
+[installed locally](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator?tabs=cli%2Cssl-netstd21)
+the effort involved is significant in comparison to using the real thing. On
+this basis it is advisable to use a real Cosmos DB instance.
+
+The app uses `local.settings.json` for local development.
+[example.local.settings.json](example.local.settings.json) can be used as the
+basis as it contains all required env vars with the exception of secrets which
+have been removed. The connection string for Azurite is included.
+
 ## License
 
 THIS INFORMATION IS LICENSED UNDER THE CONDITIONS OF THE OPEN GOVERNMENT
