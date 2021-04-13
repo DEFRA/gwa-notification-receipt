@@ -16,6 +16,21 @@ detail in its' own README:
 * [MessageReceiptHttpTrigger](MessageReceiptHttpTrigger/README.md)
 * [MessageReceiptQueueTrigger](MessageReceiptQueueTrigger/README.md)
 
+## Development
+
+The best place to start for an overall view of how JavaScript Functions work in
+Azure is the
+[Azure Functions JavaScript developer guide](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node?tabs=v2).
+From there follow the appropriate link to the documentation specific to
+your preferred development environment i.e.
+[Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node)
+or
+[command line](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-node?tabs=azure-cli%2Cbrowser).
+
+The documentation within this repo assumes the `command line` setup has been
+completed, specifically for
+[Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+
 ## License
 
 THIS INFORMATION IS LICENSED UNDER THE CONDITIONS OF THE OPEN GOVERNMENT
