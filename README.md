@@ -64,7 +64,7 @@ information in the
 [documentation](https://docs.notifications.service.gov.uk/rest-api.html#callbacks).
 The callback requires a bearer token be set along with the callback URL.
 
-### Callback URL
+### Callback URL
 
 In order to test the function it would ideally be deployed so that Notify can
 access the URL. There are options available to expose localhost to the internet
