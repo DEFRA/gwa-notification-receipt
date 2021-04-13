@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# shellcheck source=../.env
+# shellcheck disable=SC1091
 set -a; . .env; set +a
 
 # NOTE: Need to be logged in for this to work. Run `az login`.
