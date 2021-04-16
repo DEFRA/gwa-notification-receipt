@@ -13,6 +13,7 @@
   },
   "scripts": {
     "lint": "standard",
+    "start": "func start",
     "test": "jest",
     "test:watch": "jest --coverage=false --onlyChanged --watch"
   },
