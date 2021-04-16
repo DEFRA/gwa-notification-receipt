@@ -1,5 +1,15 @@
 # GWA Notification Receipt
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![Build and Deploy Production](https://github.com/DEFRA/gwa-notification-receipt/actions/workflows/build-and-deploy-production.yml/badge.svg)](https://github.com/DEFRA/gwa-notification-receipt/actions/workflows/build-and-deploy-production.yml)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-notification-receipt&metric=coverage)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-notification-receipt)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-notification-receipt&metric=sqale_index)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-notification-receipt)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-notification-receipt&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-notification-receipt)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-notification-receipt&metric=security_rating)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-notification-receipt)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-notification-receipt&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-notification-receipt)
+[![Known Vulnerabilities](https://snyk.io/test/github/defra/gwa-notification-receipt/badge.svg)](https://snyk.io/test/github/defra/gwa-notification-receipt)
+
 > An [Azure Function app](https://azure.microsoft.com/en-gb/services/functions/)
 > for receiving callbacks from
 > [GOV.UK Notify](https://www.notifications.service.gov.uk/)
