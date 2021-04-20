@@ -2,12 +2,11 @@ module.exports = async function (context) {
   try {
     const { msgReceipt } = context.bindings
 
-    // Reference is our Id, ensure doc is saved as such
+    // 'reference' is the id sent in the send request, use it for doc id
     msgReceipt.notify_id = msgReceipt.id
     msgReceipt.id = msgReceipt.reference
     delete msgReceipt.reference
 
-    // Save document
     context.bindings.receipt = JSON.stringify(msgReceipt)
   } catch (e) {
     context.log.error(e)

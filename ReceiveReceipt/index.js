@@ -11,7 +11,6 @@ module.exports = async function (context) {
         status: 202
       }
     } else if (!authHeader) {
-      // No token
       context.res = {
         body: { error: 'AuthMissing', message: 'Missing authorization header.' },
         headers: {
@@ -20,7 +19,6 @@ module.exports = async function (context) {
         status: 401
       }
     } else {
-      // Incorrect token
       context.res = {
         body: { error: 'AuthError', message: 'Authorization header is not acceptable.' },
         headers: {
