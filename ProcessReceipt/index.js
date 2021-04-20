@@ -1,7 +1,6 @@
 module.exports = async function (context) {
   try {
     const { msgReceipt } = context.bindings
-    // context.log('Message Receipt Queue Trigger function activated:\n - QueueItem:', msgReceipt)
 
     // Reference is our Id, ensure doc is saved as such
     msgReceipt.notify_id = msgReceipt.id
