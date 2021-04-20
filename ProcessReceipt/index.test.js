@@ -3,6 +3,8 @@ const processReceipt = require('./index')
 const context = require('../test/defaultContext')
 
 describe('ProcessReceipt function', () => {
+  afterEach(() => { jest.clearAllMocks() })
+
   test('receipt to be bound with correct properties', async () => {
     const id = 'id'
     const reference = 'reference'
@@ -18,6 +20,7 @@ describe('ProcessReceipt function', () => {
 
   test('an error is thrown (and logged) when an error occurs', async () => {
     context.bindings = null
+
     await expect(processReceipt(context)).rejects.toThrow(Error)
 
     expect(context.log.error).toHaveBeenCalledTimes(1)
