@@ -3,6 +3,7 @@
 LICENCE
 README.md
 super-linter.log
+*.test.js
 jest.*
 *.properties
 .local.settings.json
