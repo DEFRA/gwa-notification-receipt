@@ -17,7 +17,7 @@
 
 The app exposes an HTTP endpoint where Notify can POST a callback to. The
 message is checked for correct authorization, added to a queue for processing
-before updating a collection is Cosmos DB.
+before updating an item in a Cosmos DB container.
 
 ## Functions
 
