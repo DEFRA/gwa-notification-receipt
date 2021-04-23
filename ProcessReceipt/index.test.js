@@ -34,23 +34,23 @@ describe('ProcessReceipt function', () => {
 
 describe('ProcessReceipt bindings', () => {
   test('input binding is correct', () => {
-    const outputBindings = functionDef.bindings.filter((binding) => binding.direction === 'in')
-    expect(outputBindings).toHaveLength(1)
+    const bindings = functionDef.bindings.filter((binding) => binding.direction === 'in')
+    expect(bindings).toHaveLength(1)
 
-    const outputBinding = outputBindings[0]
-    expect(outputBinding.name).toEqual(inputBindingName)
-    expect(outputBinding.type).toEqual('queueTrigger')
-    expect(outputBinding.queueName).toEqual(`%${testEnvVars.NOTIFICATION_RECEIPT_QUEUE}%`)
+    const binding = bindings[0]
+    expect(binding.name).toEqual(inputBindingName)
+    expect(binding.type).toEqual('queueTrigger')
+    expect(binding.queueName).toEqual(`%${testEnvVars.NOTIFICATION_RECEIPT_QUEUE}%`)
   })
 
   test('output binding is correct', () => {
-    const outputBindings = functionDef.bindings.filter((binding) => binding.direction === 'out')
-    expect(outputBindings).toHaveLength(1)
+    const bindings = functionDef.bindings.filter((binding) => binding.direction === 'out')
+    expect(bindings).toHaveLength(1)
 
-    const outputBinding = outputBindings[0]
-    expect(outputBinding.name).toEqual(outputBindingName)
-    expect(outputBinding.type).toEqual('cosmosDB')
-    expect(outputBinding.databaseName).toEqual('gwa')
-    expect(outputBinding.collectionName).toEqual(`%${testEnvVars.COSMOS_DB_RECEIPTS_CONTAINER}%`)
+    const binding = bindings[0]
+    expect(binding.name).toEqual(outputBindingName)
+    expect(binding.type).toEqual('cosmosDB')
+    expect(binding.databaseName).toEqual('gwa')
+    expect(binding.collectionName).toEqual(`%${testEnvVars.COSMOS_DB_RECEIPTS_CONTAINER}%`)
   })
 })
