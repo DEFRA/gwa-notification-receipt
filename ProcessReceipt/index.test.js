@@ -1,5 +1,5 @@
 const processReceipt = require('./index')
-const functionDef = require('./function')
+const { bindings: functionBindings } = require('./function')
 
 const context = require('../test/defaultContext')
 const testEnvVars = require('../test/testEnvVars')
@@ -34,7 +34,7 @@ describe('ProcessReceipt function', () => {
 
 describe('ProcessReceipt bindings', () => {
   test('input binding is correct', () => {
-    const bindings = functionDef.bindings.filter((binding) => binding.direction === 'in')
+    const bindings = functionBindings.filter((binding) => binding.direction === 'in')
     expect(bindings).toHaveLength(1)
 
     const binding = bindings[0]
@@ -44,7 +44,7 @@ describe('ProcessReceipt bindings', () => {
   })
 
   test('output binding is correct', () => {
-    const bindings = functionDef.bindings.filter((binding) => binding.direction === 'out')
+    const bindings = functionBindings.filter((binding) => binding.direction === 'out')
     expect(bindings).toHaveLength(1)
 
     const binding = bindings[0]
