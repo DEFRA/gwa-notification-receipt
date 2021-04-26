@@ -1,4 +1,4 @@
-const receiveReceipt = require('./index')
+const receiveReceipt = require('.')
 const { bindings: functionBindings } = require('./function')
 
 const context = require('../test/defaultContext')
