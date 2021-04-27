@@ -31,12 +31,6 @@ jobs:
     - name: Test Code Base
       run: npm run test
 
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
     - name: Deploy Function App
       uses: Azure/functions-action@v1
       id: fa
@@ -55,6 +49,20 @@ jobs:
       with:
         # Full git history is needed to get a proper list of changed files
         fetch-depth: 0
+
+    - name: Setup Node.js ${{ env.NODE_VERSION }} Environment
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Install Dependencies
+      run: npm ci
+
+    - name: Lint Code Base
+      run: npm run lint
+
+    - name: Test Code Base
+      run: npm run test
 
     - name: Super Lint Code Base
       uses: github/super-linter@v3
