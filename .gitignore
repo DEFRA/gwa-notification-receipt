@@ -45,3 +45,4 @@ __pycache__/
 super-linter.log
 app-settings.*.json
 coverage
+.vscode
