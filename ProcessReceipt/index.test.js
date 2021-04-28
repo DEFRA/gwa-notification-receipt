@@ -1,4 +1,4 @@
-const processReceipt = require('./index')
+const processReceipt = require('.')
 const { bindings: functionBindings } = require('./function')
 
 const context = require('../test/defaultContext')
@@ -8,7 +8,7 @@ const inputBindingName = 'msgReceipt'
 const outputBindingName = 'receipt'
 
 describe('ProcessReceipt function', () => {
-  afterEach(() => { jest.clearAllMocks() })
+  beforeEach(() => { jest.clearAllMocks() })
 
   test('receipt to be bound with correct properties', async () => {
     const id = 'id'

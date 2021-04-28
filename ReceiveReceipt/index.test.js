@@ -9,7 +9,7 @@ const responseBindingName = 'res'
 const queueBindingName = 'messagesToSend'
 
 describe('ReceiveReceipt function', () => {
-  afterEach(() => { jest.clearAllMocks() })
+  beforeEach(() => { jest.clearAllMocks() })
 
   test('request with correct bearer token sends message and returns 202', async () => {
     const body = { id: 'fake' }
