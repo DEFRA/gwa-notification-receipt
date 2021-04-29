@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Defra",
   "contributors": [
+    "Mark Harrop <mark.harrop@defra.gov.uk>",
     "Steve Hunt <steven.hunt@defra.gov.uk>"
   ],
   "devDependencies": {
