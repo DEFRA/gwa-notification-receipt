@@ -92,5 +92,6 @@ describe('ReceiveReceipt bindings', () => {
     const binding = bindings[0]
     expect(binding.type).toEqual('queue')
     expect(binding.queueName).toEqual(`%${testEnvVars.NOTIFICATION_RECEIPT_QUEUE}%`)
+    expect(binding.connection).toEqual('AzureWebJobsStorage')
   })
 })

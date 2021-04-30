@@ -41,6 +41,7 @@ describe('ProcessReceipt bindings', () => {
     expect(binding.name).toEqual(inputBindingName)
     expect(binding.type).toEqual('queueTrigger')
     expect(binding.queueName).toEqual(`%${testEnvVars.NOTIFICATION_RECEIPT_QUEUE}%`)
+    expect(binding.connection).toEqual('AzureWebJobsStorage')
   })
 
   test('output binding is correct', () => {
@@ -52,5 +53,6 @@ describe('ProcessReceipt bindings', () => {
     expect(binding.type).toEqual('cosmosDB')
     expect(binding.databaseName).toEqual('gwa')
     expect(binding.collectionName).toEqual(`%${testEnvVars.COSMOS_DB_RECEIPTS_CONTAINER}%`)
+    expect(binding.connectionStringSetting).toEqual(`${testEnvVars.COSMOS_DB_CONNECTION_STRING}`)
   })
 })
