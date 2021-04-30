@@ -13,7 +13,7 @@
       "direction": "out",
       "databaseName": "gwa",
       "collectionName": "%COSMOS_DB_RECEIPTS_CONTAINER%",
-      "connectionStringSetting": "COSMOS_DB"
+      "connectionStringSetting": "COSMOS_DB_CONNECTION_STRING"
     }
   ],
   "disabled": false
