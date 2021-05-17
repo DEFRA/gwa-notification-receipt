@@ -13,13 +13,14 @@ describe('ProcessReceipt function', () => {
   test('receipt to be bound with correct properties', async () => {
     const id = 'id'
     const reference = 'reference'
-    context.bindings = { msgReceipt: { id, reference } }
+    const status = 'delivered'
+    context.bindings = { msgReceipt: { id, reference, status } }
 
     await processReceipt(context)
 
     expect(context.bindings).toHaveProperty(outputBindingName)
     const receipt = JSON.parse(context.bindings[outputBindingName])
-    expect(receipt).toMatchObject({ id: reference, notify_id: id })
+    expect(receipt).toMatchObject({ id: reference, notify_id: id, status: `Notify: ${status}` })
     expect(receipt).not.toMatchObject({ reference: expect.anything() })
   })
 

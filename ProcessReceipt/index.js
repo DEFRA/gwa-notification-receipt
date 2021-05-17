@@ -6,6 +6,7 @@ module.exports = async function (context) {
     msgReceipt.notify_id = msgReceipt.id
     msgReceipt.id = msgReceipt.reference
     delete msgReceipt.reference
+    msgReceipt.status = `Notify: ${msgReceipt.status}`
 
     context.bindings.receipt = JSON.stringify(msgReceipt)
   } catch (e) {
