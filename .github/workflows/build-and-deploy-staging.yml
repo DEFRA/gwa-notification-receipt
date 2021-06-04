@@ -65,7 +65,7 @@ jobs:
       run: npm run test
 
     - name: Super Lint Code Base
-      uses: github/super-linter@v3
+      uses: docker://ghcr.io/github/super-linter:slim-v4
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

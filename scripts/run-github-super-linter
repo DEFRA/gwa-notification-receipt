@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-docker pull github/super-linter:latest
+docker pull ghcr.io/github/super-linter:slim-v4
 
 # Run [GitHub Super-Linter](https://github.com/github/super-linter/blob/master/docs/run-linter-locally.md) locally
 docker run -e RUN_LOCAL=true "$@" -v "$(pwd)"/:/tmp/lint github/super-linter
