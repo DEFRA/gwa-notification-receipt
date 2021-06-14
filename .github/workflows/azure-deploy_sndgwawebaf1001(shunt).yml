@@ -42,3 +42,5 @@ jobs:
         slot-name: 'shunt'
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_35a56091406146a28f8b2c8baca2130d }}
+        enable-oryx-build: true
+        scm-do-build-during-deployment: true
