@@ -8,7 +8,7 @@
     "Steve Hunt <steven.hunt@defra.gov.uk>"
   ],
   "devDependencies": {
-    "@jest/types": "^26.6.2",
+    "@types/jest": "^26.0.23",
     "jest": "^26.6.3",
     "standard": "^16.0.3"
   },
