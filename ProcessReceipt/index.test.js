@@ -11,17 +11,18 @@ describe('ProcessReceipt function', () => {
   beforeEach(() => { jest.clearAllMocks() })
 
   test('receipt to be bound with correct properties', async () => {
-    const id = 'id'
-    const reference = 'reference'
+    const notifyId = '57c767c8-db85-4c08-af26-048c6efb1bf6'
+    const messageId = '4e91a2ee-a674-47c7-a8dd-04dee676c935'
+    const receiptId = 'f0f68cdd-2af1-4d2f-88ae-f0bbf2cbad25'
+    const reference = `${messageId}:${receiptId}`
     const status = 'delivered'
-    context.bindings = { msgReceipt: { id, reference, status } }
+    context.bindings = { msgReceipt: { id: notifyId, reference, status } }
 
     await processReceipt(context)
 
     expect(context.bindings).toHaveProperty(outputBindingName)
     const receipt = JSON.parse(context.bindings[outputBindingName])
-    expect(receipt).toMatchObject({ id: reference, notify_id: id, status: `Notify: ${status}` })
-    expect(receipt).not.toMatchObject({ reference: expect.anything() })
+    expect(receipt).toMatchObject({ id: receiptId, notifyId, messageId, reference, status: `Notify: ${status}` })
   })
 
   test('an error is thrown (and logged) when an error occurs', async () => {

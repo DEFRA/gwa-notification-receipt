@@ -2,10 +2,11 @@ module.exports = async function (context) {
   try {
     const { msgReceipt } = context.bindings
 
-    // 'reference' is the id sent in the send request, use it for doc id
-    msgReceipt.notify_id = msgReceipt.id
-    msgReceipt.id = msgReceipt.reference
-    delete msgReceipt.reference
+    msgReceipt.notifyId = msgReceipt.id
+    // See README for more info on `reference`.
+    const [messageId, id] = msgReceipt.reference.split(':')
+    msgReceipt.id = id
+    msgReceipt.messageId = messageId
     msgReceipt.status = `Notify: ${msgReceipt.status}`
 
     context.bindings.receipt = JSON.stringify(msgReceipt)
